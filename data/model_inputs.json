@@ -1,0 +1,52 @@
+{
+ "assumptions": {
+  "gross_margin_base": 0.31,
+  "prior_year_customers": 10000,
+  "signature_premium": 0.12,
+  "adoption_buffer": 1.5,
+  "tier_cost_of_premium": 0.35,
+  "clv_years": 5,
+  "target": "Restorative Adventurers"
+ },
+ "scenarios": {
+  "Baseline": {
+   "sessions": 1050000,
+   "conversion": 0.0072,
+   "cac_efficiency": 0.0,
+   "repeat_uplift": 0.0,
+   "brand_investment": 400000,
+   "strategic_investment": 0,
+   "mix": null
+  },
+  "Strategy case": {
+   "sessions": 1000000,
+   "conversion": 0.0076,
+   "cac_efficiency": 0.05,
+   "repeat_uplift": 0.02,
+   "brand_investment": 900000,
+   "strategic_investment": 450000,
+   "mix": {
+    "Restorative Adventurers": 0.24,
+    "Purposeful Explorers": 0.19,
+    "Experience Collectors": 0.21,
+    "Budget Social Travelers": 0.22,
+    "Adventure Purists": 0.14
+   }
+  },
+  "Upside case": {
+   "sessions": 1060000,
+   "conversion": 0.0082,
+   "cac_efficiency": 0.1,
+   "repeat_uplift": 0.04,
+   "brand_investment": 1000000,
+   "strategic_investment": 450000,
+   "mix": {
+    "Restorative Adventurers": 0.3,
+    "Purposeful Explorers": 0.2,
+    "Experience Collectors": 0.21,
+    "Budget Social Travelers": 0.17,
+    "Adventure Purists": 0.12
+   }
+  }
+ }
+}

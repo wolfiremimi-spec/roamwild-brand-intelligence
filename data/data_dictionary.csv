@@ -1,0 +1,33 @@
+field,type,description,range_or_values,generation_logic
+customer_id,text,Unique synthetic customer ID,RW-00001 to RW-01500,Sequential
+age,integer,Age in years,21-78,Normal by latent profile
+income,integer (USD),Household income,"28,000-600,000",Lognormal by profile
+region,category,U.S. home region,"West Coast, Mountain West, Northeast, South, Midwest",Profile-weighted draw
+travel_frequency,integer,Leisure trips of any kind per year,1-14,Poisson by profile
+annual_travel_spend,integer (USD),Total annual leisure travel spend,derived,travel_frequency x average_trip_spend
+average_trip_spend,integer (USD),Average spend per leisure trip (all providers),"400-15,000",Lognormal; rises with income and luxury preference
+preferred_trip_type,category,Preferred ROAMWILD trip type,"Hiking & trekking, Backpacking, Surf, Wellness retreat, National parks, Camping, Outdoor photography, International adventure, Cultural immersion",Profile-weighted draw
+adventure_intensity,integer 1-10,Adventure intensity (survey score),1-10,Rounded normal by profile
+wellness_interest,integer 1-10,Wellness interest (survey score),1-10,Rounded normal by profile
+sustainability_importance,integer 1-10,Sustainability importance (survey score),1-10,Rounded normal by profile
+cultural_interest,integer 1-10,Cultural interest (survey score),1-10,Rounded normal by profile
+luxury_preference,integer 1-10,Luxury preference (survey score),1-10,Rounded normal by profile
+solo_travel_preference,integer 1-10,Solo travel preference (survey score),1-10,Rounded normal by profile
+group_travel_preference,integer 1-10,Group travel preference (survey score),1-10,Rounded normal by profile
+price_sensitivity,integer 1-10,Price sensitivity (survey score),1-10,Rounded normal by profile
+social_media_influence,integer 1-10,Social media influence (survey score),1-10,Rounded normal by profile
+planning_preference,integer 1-10,Planning preference (survey score),1-10,Rounded normal by profile
+personalization_interest,integer 1-10,Personalization interest (survey score),1-10,Rounded normal by profile
+community_interest,integer 1-10,Community interest (survey score),1-10,Rounded normal by profile
+brand_loyalty,integer 1-10,Brand loyalty (survey score),1-10,Rounded normal by profile
+booking_frequency,decimal,ROAMWILD bookings per year,0.3-3.0,Normal by profile
+avg_booking_value,integer (USD),Average ROAMWILD booking value,"700-9,000","About 78% of average_trip_spend, higher with personalization interest"
+nps,integer 0-10,Likelihood to recommend ROAMWILD,0-10,Profile fit + personalization/planning match + noise
+repeat_probability,decimal,Modeled probability of booking again within 12 months,0-1,"Logistic of nps, loyalty, community"
+repeat_booking,0/1,Booked again within 12 months,0 or 1,Bernoulli(repeat_probability)
+engagement_score,integer 1-10,Engagement with ROAMWILD content and community,1-10,"Community, social influence and nps"
+referrals_made,integer,Referred customers in the last 12 months,0+,Poisson; rises with nps and engagement
+wtp_premium_pct,decimal (%),Stated extra % willing to pay for a personalized small-group trip with a certified guide and built-in recovery,0-40,"Normal by profile, lower with price sensitivity"
+acquisition_channel,category,Channel that acquired the customer,"Paid social, Paid search, Organic search, Referral, Creator partnership, Travel advisor, Email/CRM, Marketplace/OTA",Profile-weighted draw
+cac,integer (USD),Cost to acquire this customer,derived,Channel base cost x lognormal noise
+estimated_clv,integer (USD),5-year gross-profit CLV,derived,"avg_booking_value x 31% gross margin x booking_frequency x (1-r^5)/(1-r), r = repeat_probability"

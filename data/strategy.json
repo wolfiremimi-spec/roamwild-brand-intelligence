@@ -1,0 +1,486 @@
+{
+ "criteria": [
+  "Market size",
+  "Growth potential",
+  "Willingness to pay",
+  "Customer lifetime value",
+  "Brand fit",
+  "Retention potential",
+  "Competitive whitespace",
+  "Accessibility"
+ ],
+ "weight_scenarios": {
+  "Base (brief)": [
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.15,
+   0.1,
+   0.1,
+   0.05
+  ],
+  "Economics-led": [
+   0.1,
+   0.1,
+   0.2,
+   0.25,
+   0.1,
+   0.15,
+   0.05,
+   0.05
+  ],
+  "Growth-led": [
+   0.25,
+   0.25,
+   0.1,
+   0.1,
+   0.1,
+   0.05,
+   0.1,
+   0.05
+  ],
+  "Equal weights": [
+   0.125,
+   0.125,
+   0.125,
+   0.125,
+   0.125,
+   0.125,
+   0.125,
+   0.125
+  ],
+  "Differentiation-led": [
+   0.1,
+   0.1,
+   0.1,
+   0.1,
+   0.25,
+   0.1,
+   0.2,
+   0.05
+  ]
+ },
+ "judgment_rationale": {
+  "Growth potential": {
+   "Restorative Adventurers": "Wellness tourism grew 13.8% in 2024 and is forecast to grow 9.1% a year to 2029 (Global Wellness Institute, Nov 2025).",
+   "Purposeful Explorers": "69% of travelers want to leave destinations better than they found them (Booking.com, Apr 2025).",
+   "Experience Collectors": "Adventure operators report demand for new, off-the-beaten-path experiences (ATTA, Jun 2025); segment already travels 5+ times a year.",
+   "Budget Social Travelers": "58% of solo travelers want to meet new people, up from 43% in 2024 (Hostelworld, 2025), but spend is low.",
+   "Adventure Purists": "Outdoor participation is at a record, but Americans go out less often than before the pandemic (OIA, Jun 2026); purists self-organize."
+  },
+  "Competitive whitespace": {
+   "Restorative Adventurers": "No category combines real challenge, recovery and personalization (see perceptual maps).",
+   "Purposeful Explorers": "Adventure specialists and impact operators serve parts of this need.",
+   "Experience Collectors": "Premium planners and specialists already compete hard for this traveler.",
+   "Adventure Purists": "Specialists and independent planning own this traveler.",
+   "Budget Social Travelers": "Marketplaces and mass tour operators compete on price."
+  }
+ },
+ "sensitivity": {
+  "Restorative Adventurers": {
+   "Base (brief)": 1,
+   "Economics-led": 1,
+   "Growth-led": 1,
+   "Equal weights": 1,
+   "Differentiation-led": 1,
+   "Rank #1 in random weightings": 0.963,
+   "Rank #2 in random weightings": 0.026
+  },
+  "Experience Collectors": {
+   "Base (brief)": 3,
+   "Economics-led": 3,
+   "Growth-led": 3,
+   "Equal weights": 3,
+   "Differentiation-led": 3,
+   "Rank #1 in random weightings": 0.0,
+   "Rank #2 in random weightings": 0.093
+  },
+  "Purposeful Explorers": {
+   "Base (brief)": 2,
+   "Economics-led": 2,
+   "Growth-led": 4,
+   "Equal weights": 2,
+   "Differentiation-led": 2,
+   "Rank #1 in random weightings": 0.008,
+   "Rank #2 in random weightings": 0.816
+  },
+  "Adventure Purists": {
+   "Base (brief)": 5,
+   "Economics-led": 5,
+   "Growth-led": 5,
+   "Equal weights": 5,
+   "Differentiation-led": 5,
+   "Rank #1 in random weightings": 0.0,
+   "Rank #2 in random weightings": 0.0
+  },
+  "Budget Social Travelers": {
+   "Base (brief)": 4,
+   "Economics-led": 4,
+   "Growth-led": 2,
+   "Equal weights": 4,
+   "Differentiation-led": 4,
+   "Rank #1 in random weightings": 0.028,
+   "Rank #2 in random weightings": 0.064
+  }
+ },
+ "segmentation": {
+  "silhouette_by_k": {
+   "4": 0.219,
+   "5": 0.226,
+   "6": 0.212
+  },
+  "chosen_k": 5,
+  "adjusted_rand_index_vs_latent": 0.746,
+  "variables": [
+   "travel_frequency",
+   "log_annual_spend",
+   "adventure_intensity",
+   "wellness_interest",
+   "sustainability_importance",
+   "community_interest",
+   "price_sensitivity",
+   "luxury_preference",
+   "personalization_interest",
+   "cultural_interest"
+  ],
+  "centroids_z": {
+   "Experience Collectors": {
+    "travel_frequency": 0.8,
+    "log_annual_spend": 1.05,
+    "adventure_intensity": -0.37,
+    "wellness_interest": -0.41,
+    "sustainability_importance": -0.49,
+    "community_interest": -0.82,
+    "price_sensitivity": -0.78,
+    "luxury_preference": 0.96,
+    "personalization_interest": 0.22,
+    "cultural_interest": 0.89
+   },
+   "Adventure Purists": {
+    "travel_frequency": 0.25,
+    "log_annual_spend": -0.24,
+    "adventure_intensity": 1.24,
+    "wellness_interest": -0.97,
+    "sustainability_importance": -0.02,
+    "community_interest": -0.48,
+    "price_sensitivity": 0.34,
+    "luxury_preference": -1.01,
+    "personalization_interest": -0.89,
+    "cultural_interest": -0.78
+   },
+   "Restorative Adventurers": {
+    "travel_frequency": 0.06,
+    "log_annual_spend": 0.65,
+    "adventure_intensity": 0.38,
+    "wellness_interest": 1.42,
+    "sustainability_importance": 0.59,
+    "community_interest": 0.39,
+    "price_sensitivity": -0.91,
+    "luxury_preference": 0.85,
+    "personalization_interest": 1.36,
+    "cultural_interest": -0.02
+   },
+   "Purposeful Explorers": {
+    "travel_frequency": -0.3,
+    "log_annual_spend": -0.21,
+    "adventure_intensity": -0.06,
+    "wellness_interest": 0.24,
+    "sustainability_importance": 1.26,
+    "community_interest": 1.04,
+    "price_sensitivity": -0.15,
+    "luxury_preference": -0.58,
+    "personalization_interest": 0.18,
+    "cultural_interest": 0.73
+   },
+   "Budget Social Travelers": {
+    "travel_frequency": -0.66,
+    "log_annual_spend": -0.97,
+    "adventure_intensity": -0.69,
+    "wellness_interest": -0.04,
+    "sustainability_importance": -0.73,
+    "community_interest": 0.08,
+    "price_sensitivity": 1.06,
+    "luxury_preference": -0.29,
+    "personalization_interest": -0.54,
+    "cultural_interest": -0.67
+   }
+  }
+ },
+ "opp_criteria": [
+  "Customer desirability",
+  "Competitive differentiation",
+  "Business feasibility",
+  "Brand credibility",
+  "Revenue potential",
+  "Long-term defensibility"
+ ],
+ "opp_weights": [
+  0.2,
+  0.2,
+  0.15,
+  0.15,
+  0.2,
+  0.1
+ ],
+ "whitespace_3d": {
+  "Restorative Adventure point (8,8,7)": 3.61,
+  "ROAMWILD today (5,4,6)": 2.24,
+  "Budget social point (3,4,5)": 1.41,
+  "Expedition point (6,5,9)": 1.0
+ },
+ "evc": {
+  "reference_components": {
+   "Lodging, 5 nights at $330": 1650,
+   "Private guide, 3 days at $350": 1050,
+   "Recovery sessions (massage, sauna, yoga)": 450,
+   "Ground transport and logistics": 300,
+   "Planning time, 12 hours at $75/hour": 900
+  },
+  "reference_value": 4350,
+  "positive_differentiation": {
+   "Fitness-matched pacing and route choice": 250,
+   "Small-group community (max 10)": 200
+  },
+  "negative_differentiation": {
+   "Less schedule flexibility than DIY": -200
+  },
+  "evc": 4600,
+  "current_price": 3455,
+  "signature_price": 3870,
+  "headroom_vs_signature": 730
+ },
+ "wtp": {
+  "Adventure Purists": {
+   "baseline_abv": 1205.7471264367816,
+   "stated_premium_mean_pct": 4.53639846743295,
+   "stated_premium_median_pct": 3.6,
+   "likely_adopter_share": 0.0229885057471264,
+   "abv_uplift_pct": 0.0027586206896551,
+   "strategy_abv": 1209.0733254062625,
+   "gross_margin_strategy": 0.3116009852216749,
+   "repeat_rate": 0.1455938697318007,
+   "booking_frequency": 0.8053639846743295,
+   "cac": 203.06513409961687,
+   "mix_baseline": 0.174
+  },
+  "Budget Social Travelers": {
+   "baseline_abv": 1117.2413793103449,
+   "stated_premium_mean_pct": 4.321182266009853,
+   "stated_premium_median_pct": 2.85,
+   "likely_adopter_share": 0.0024630541871921,
+   "abv_uplift_pct": 0.000295566502463,
+   "strategy_abv": 1117.5715984372348,
+   "gross_margin_strategy": 0.3101715341308937,
+   "repeat_rate": 0.167487684729064,
+   "booking_frequency": 0.7935960591133004,
+   "cac": 238.07635467980296,
+   "mix_baseline": 0.2706666666666666
+  },
+  "Experience Collectors": {
+   "baseline_abv": 3438.6186186186187,
+   "stated_premium_mean_pct": 12.991591591591591,
+   "stated_premium_median_pct": 12.9,
+   "likely_adopter_share": 0.1831831831831832,
+   "abv_uplift_pct": 0.0219819819819819,
+   "strategy_abv": 3514.206271136001,
+   "gross_margin_strategy": 0.3227574002574002,
+   "repeat_rate": 0.1771771771771771,
+   "booking_frequency": 1.0897897897897897,
+   "cac": 220.45345345345345,
+   "mix_baseline": 0.222
+  },
+  "Purposeful Explorers": {
+   "baseline_abv": 1843.501945525292,
+   "stated_premium_mean_pct": 13.601945525291828,
+   "stated_premium_median_pct": 13.6,
+   "likely_adopter_share": 0.2140077821011673,
+   "abv_uplift_pct": 0.02568093385214,
+   "strategy_abv": 1890.8447970446184,
+   "gross_margin_strategy": 0.3249041133963313,
+   "repeat_rate": 0.3307392996108949,
+   "booking_frequency": 1.1155642023346304,
+   "cac": 181.5136186770428,
+   "mix_baseline": 0.1713333333333333
+  },
+  "Restorative Adventurers": {
+   "baseline_abv": 3455.4732510288068,
+   "stated_premium_mean_pct": 23.70905349794239,
+   "stated_premium_median_pct": 23.6,
+   "likely_adopter_share": 0.8065843621399177,
+   "abv_uplift_pct": 0.0967901234567901,
+   "strategy_abv": 3789.928933597521,
+   "gross_margin_strategy": 0.3661728395061728,
+   "repeat_rate": 0.4691358024691358,
+   "booking_frequency": 1.405761316872428,
+   "cac": 200.4567901234568,
+   "mix_baseline": 0.162
+  }
+ },
+ "channel": {
+  "Creator partnership": {
+   "customers": 200,
+   "avg_cac": 215.26,
+   "avg_clv": 1077.47,
+   "repeat": 0.25,
+   "clv_to_cac": 5.01
+  },
+  "Email/CRM": {
+   "customers": 67,
+   "avg_cac": 41.1,
+   "avg_clv": 1444.87,
+   "repeat": 0.3,
+   "clv_to_cac": 35.15
+  },
+  "Marketplace/OTA": {
+   "customers": 138,
+   "avg_cac": 296.9,
+   "avg_clv": 1131.68,
+   "repeat": 0.25,
+   "clv_to_cac": 3.81
+  },
+  "Organic search": {
+   "customers": 233,
+   "avg_cac": 89.92,
+   "avg_clv": 1161.11,
+   "repeat": 0.21,
+   "clv_to_cac": 12.91
+  },
+  "Paid search": {
+   "customers": 264,
+   "avg_cac": 294.29,
+   "avg_clv": 1040.95,
+   "repeat": 0.2,
+   "clv_to_cac": 3.54
+  },
+  "Paid social": {
+   "customers": 304,
+   "avg_cac": 337.96,
+   "avg_clv": 1066.85,
+   "repeat": 0.24,
+   "clv_to_cac": 3.16
+  },
+  "Referral": {
+   "customers": 224,
+   "avg_cac": 63.05,
+   "avg_clv": 1224.42,
+   "repeat": 0.29,
+   "clv_to_cac": 19.42
+  },
+  "Travel advisor": {
+   "customers": 70,
+   "avg_cac": 230.64,
+   "avg_clv": 1859.96,
+   "repeat": 0.29,
+   "clv_to_cac": 8.06
+  }
+ },
+ "nps_by_band": {
+  "Detractor 0-6": {
+   "repeat": 0.036,
+   "referrals": 0.263,
+   "n": 335
+  },
+  "Passive 7-8": {
+   "repeat": 0.18,
+   "referrals": 0.518,
+   "n": 657
+  },
+  "Promoter 9-10": {
+   "repeat": 0.461,
+   "referrals": 0.77,
+   "n": 508
+  }
+ },
+ "overall": {
+  "nps": 11.5,
+  "repeat_rate": 0.243,
+  "avg_booking_value": 2151,
+  "median_booking_value": 1730.0,
+  "avg_cac": 212,
+  "avg_clv": 1162,
+  "median_clv": 678.0,
+  "clv_to_cac": 5.47,
+  "wtp_mean": 11.0
+ },
+ "paid_share": 0.471,
+ "top20_clv_share": 0.551,
+ "positioning_statement": "FOR time-pressed professionals who want adventure that restores them rather than wears them out, WHO need real challenge and real recovery in the same trip without planning it themselves, ROAMWILD IS the small-group adventure travel company THAT matches every trip to your fitness and balances each day of effort with genuine recovery, BECAUSE every itinerary is built from a Fit Profile, paced by guides certified in recovery, and capped at ten travelers.",
+ "positioning": {
+  "Target audience": "Restorative Adventurers: time-pressed professionals, median income about $162K, around 40 years old, who want adventure that leaves them restored (16% of customers, 42% of lifetime gross profit).",
+  "Frame of reference": "Small-group adventure travel. The competitive set: adventure specialists, wellness retreats and premium travel planners.",
+  "Customer need": "Come home both challenged and restored, without planning it or trading one for the other.",
+  "Points of parity": "Certified, safety-trained guides; quality lodging; smooth logistics; responsible travel practices; fair cancellation terms.",
+  "Points of difference": "1) Challenge and recovery designed together. 2) Every trip matched to the traveler's fitness and goals. 3) Small groups of people at the same pace.",
+  "Reasons to believe": "A 12-question Fit Profile and pace groups; guides certified in pacing and recovery; groups capped at ten; recovery included in every itinerary.",
+  "Functional benefit": "The right level of challenge with real recovery, fully planned.",
+  "Emotional benefit": "Pride in the effort and the feeling of coming back renewed.",
+  "Brand promise": "Come back challenged and restored."
+ },
+ "platform": {
+  "Brand purpose": "Help people come back from the outdoors stronger than they left.",
+  "Brand vision": "Adventure that leaves people more whole, not more worn out.",
+  "Brand mission": "Design small-group outdoor trips that balance real challenge with real recovery, matched to each traveler.",
+  "Brand promise": "Come back challenged and restored.",
+  "Brand positioning": "The small-group adventure company that matches every trip to your fitness and builds recovery into every day.",
+  "Brand personality": "Grounded, capable, warm, candid, curious. Never extreme, never pampering.",
+  "Reasons to believe": "Fit Profile and pace groups; recovery-certified guides; groups of ten or fewer; recovery included, never upsold.",
+  "Value proposition": "For Restorative Adventurers: the challenge you want, the recovery you need, planned around you, at a premium that sits below bespoke planners."
+ },
+ "fin_sensitivity": [
+  {
+   "case": "Strategy case as modeled",
+   "revenue": 25565439.686514553,
+   "revenue_growth": 0.17157346314073463,
+   "incremental_gross_profit": 1859169.2274702834,
+   "marketing_roi": 1.1640013829625222,
+   "clv_to_cac": 3.8514831729700423,
+   "payback_months": 5.545282962606972
+  },
+  {
+   "case": "No conversion lift (0.72%)",
+   "revenue": 24533162.4661893,
+   "revenue_growth": 0.12426785788741723,
+   "incremental_gross_profit": 1510957.9742203047,
+   "marketing_roi": 0.9384935457693045,
+   "clv_to_cac": 3.7733287787910146,
+   "payback_months": 6.190373976838658
+  },
+  {
+   "case": "Half the premium-tier adoption",
+   "revenue": 25031176.687969353,
+   "revenue_growth": 0.14709008405127877,
+   "incremental_gross_profit": 1331807.3970265836,
+   "marketing_roi": 0.5501725213722158,
+   "clv_to_cac": 3.612566504999545,
+   "payback_months": 7.7410738705247955
+  },
+  {
+   "case": "Target reaches only 20% of new customers",
+   "revenue": 24160610.950913936,
+   "revenue_growth": 0.10719514275708764,
+   "incremental_gross_profit": 1326008.1065363549,
+   "marketing_roi": 0.5214270367996153,
+   "clv_to_cac": 3.46510658370305,
+   "payback_months": 7.887331899426802
+  },
+  {
+   "case": "No repeat-rate uplift",
+   "revenue": 25112228.58242815,
+   "revenue_growth": 0.15080440501933556,
+   "incremental_gross_profit": 1706290.5206331713,
+   "marketing_roi": 0.9860564556622878,
+   "clv_to_cac": 3.748290607142258,
+   "payback_months": 6.042124314134049
+  },
+  {
+   "case": "All four downsides at once",
+   "revenue": 22307498.381223787,
+   "revenue_growth": 0.022273563567244192,
+   "incremental_gross_profit": 423620.2132217353,
+   "marketing_roi": -0.46459627733028114,
+   "clv_to_cac": 3.1175300666006067,
+   "payback_months": 22.412993208496214
+  }
+ ]
+}
